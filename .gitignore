@@ -1,0 +1,7 @@
+*
+*/
+
+# exclude
+!.gitignore
+!administrator/components/com_catpromocional/*
+!components/com_catpromocional/*
