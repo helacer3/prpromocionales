@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="nombre"
+			type="text"
+			label="COM_CATPROMOCIONAL_MODELONOMBRE_LABEL"
+			description="COM_CATPROMOCIONAL_MODELONOMBRE_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+		<field
+			name="descripcion"
+			type="editor"
+			label="COM_CATPROMOCIONAL_MODELODESCRIPCION_LABEL"
+			description="COM_CATPROMOCIONAL_MODELODESCRIPCION_LABEL_DESC"
+			rows="10" 
+			cols="35"
+                        filter="safehtml"
+			default=""
+                        required="true"
+		/>
+		<field
+			name="estado"
+			type="list"
+			label="COM_CATPROMOCIONAL_MODELOESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_MODELOESTADO_LABEL_DESC"
+			class="PRinput"
+			>
+			<option value="1">Activo</option>
+			<option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>

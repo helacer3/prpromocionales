@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="nombre"
+			type="text"
+			label="COM_CATPROMOCIONAL_CLIMNOMBRE_LABEL"
+			description="COM_CATPROMOCIONAL_CLIMNOMBRE_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+		<field
+			name="descripcion"
+			type="textarea"
+			label="COM_CATPROMOCIONAL_CLIMDESCRIPCION_LABEL"
+			description="COM_CATPROMOCIONAL_CLIMDESCRIPCION_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+		<field
+			name="cantidad"
+			type="text"
+			label="COM_CATPROMOCIONAL_CLIMCANTIDAD_LABEL"
+			description="COM_CATPROMOCIONAL_CLIMCANTIDAD_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+	</fieldset>
+</form>

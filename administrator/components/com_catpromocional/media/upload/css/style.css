@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*
+ * jQuery File Upload Plugin CSS Example 8.8.2
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+body {
+  padding-top: 60px;
+  background-color:#F3F3F3;
+}
+
+.header,
+.header .image,
+.header .title {
+	display:inline-block;
+	float:left;
+	position:relative;
+}
+.header {
+	margin-left: 50px;
+	margin-top: -50px;
+	width:90%;
+	background-color:#FFF !important;
+	border-bottom-color:#069;
+}
+.header .image {
+	width:100%;
+	text-align:center;
+}
+.header .title {
+	width:100%;
+	color:#069;
+	font-size:28px;
+	text-align:center;
+	padding: 10px;
+	border-bottom-style:dotted;
+	margin-bottom:20px;
+}
+.header .title span {
+	font-weight:bold;
+}
+
+.btn-success  { background-color:#9BDEFF;}
+.start { background-color: #00A9FB; }
+.cancel { background-color:#0077B0; }
+.delete { background-color:#00496C; }
+
+.btn-success:hover, .start:hover, 
+.cancel:hover, .delete:hover { background-color:#FFA; color:#00496C; }

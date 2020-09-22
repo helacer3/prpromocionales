@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+        <field
+			name="id_producto"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PRPPRODUCTO_LABEL"
+			description="COM_CATPROMOCIONAL_PRPPRODUCTO_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__producto WHERE estado = 1 ORDER BY nombre ASC" key_field="id" value_field="nombre"
+            required="true"
+			class="PRinput cls_productos">
+            <option value="0">Seleccione Producto</option>
+		</field>
+                <field
+			name="id_producto_tecnica"
+			type="list"
+			label="COM_CATPROMOCIONAL_PRPTECNICA_LABEL"
+			description="COM_CATPROMOCIONAL_PRPTECNICA_LABEL_DESC"			
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Técnica</option>
+		</field>
+                <field
+			name="id_unidad"
+			type="list"
+			label="COM_CATPROMOCIONAL_PRPUNIDA_LABEL"
+			description="COM_CATPROMOCIONAL_PRPUNIDAD_LABEL_DESC"			
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Unidad</option>
+		</field>
+                <field
+			name="id_escala"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PRPESCALA_LABEL"
+			description="COM_CATPROMOCIONAL_PRPESCALA_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__escala WHERE estado = 1 and id_tipo_escala = 2 ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Escala</option>
+		</field>
+                <field
+			name="id_escala_rangos"
+			type="list"
+			label="COM_CATPROMOCIONAL_PRPRESCALA_LABEL"
+			description="COM_CATPROMOCIONAL_PRPRESCALA_LABEL_DESC" 			
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Escala Rango</option>
+		</field>
+                <field
+			name="id_tipo_precio"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PRPTPRECIO_LABEL"
+			description="COM_CATPROMOCIONAL_PRPTPRECIO_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__tipo_precio ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Tipo Precio</option>
+		</field>
+		<field
+			name="valor"
+			type="text"
+			label="COM_CATPROMOCIONAL_PRPVALOR_LABEL"
+			description="COM_CATPROMOCIONAL_PRPVALOR_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+                <field
+			name="estado"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PRPESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_PRPESTADO_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__estado ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Selecciones Estado</option>
+		</field>
+	</fieldset>
+</form>

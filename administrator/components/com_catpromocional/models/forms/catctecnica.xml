@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="images_file"
+			type="file"
+            accept=".xlsx"
+			label="COM_CATPROMOCIONAL_XLSTECNICAS_LABEL"
+			description="COM_CATPROMOCIONAL_XLSTECNICAS_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+	</fieldset>
+</form>

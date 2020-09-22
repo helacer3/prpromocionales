@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+            <field
+			name="id_producto"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PRECIOPRODUCTO_LABEL"
+			description="COM_CATPROMOCIONAL_PRECIOPRODUCTO_LABEL_DESC" 
+			query="SELECT id,sku FROM #__producto WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="sku"
+			class="PRinput cls_productos">
+	            <option value="0">Seleccione Sku Producto</option>
+		</field>
+            <field
+			name="id_escala"
+			type="sql"
+			label="COM_CATPROMOCIONAL_ASGCOSTOESCALA_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOESCALA_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__escala WHERE estado = 1 and id_tipo_escala = 1 ORDER BY nombre ASC" key_field="id" value_field="nombre"
+            required="true"
+			class="PRinput">
+           		<option value="0">Seleccione Escala</option>
+		</field>
+                <field
+			name="id_escala_rangos"
+			type="list"
+			label="COM_CATPROMOCIONAL_ASGCOSTORESCALA_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTORESCALA_LABEL_DESC" 			
+            required="true"
+			class="PRinput">
+        		<option value="0">Seleccione Escala Rango</option>
+		</field>
+		<field
+			name="valor"
+			type="text"
+			label="COM_CATPROMOCIONAL_PRECIOVALOR_LABEL"
+			description="COM_CATPROMOCIONAL_PRECIOVALOR_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+	</fieldset>
+</form>

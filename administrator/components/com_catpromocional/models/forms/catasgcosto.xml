@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+                <field
+			name="id_tecnica"
+			type="sql"
+			label="COM_CATPROMOCIONAL_ASGCOSTOTECNICA_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOTECNICA_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__tecnica WHERE estado = 1 ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Técnica</option>
+		</field>
+                <field
+			name="id_costofijo"
+			type="sql"
+			label="COM_CATPROMOCIONAL_ASGCOSTOCFIJO_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOCFIJO_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__costofijo WHERE estado = 1 ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Costo Fijo</option>
+		</field>
+                <field
+			name="id_escala"
+			type="sql"
+			label="COM_CATPROMOCIONAL_ASGCOSTOESCALA_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOESCALA_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__escala WHERE estado = 1 and id_tipo_escala = 3 ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Escala</option>
+		</field>
+                <field
+			name="id_escala_rango"
+			type="list"
+			label="COM_CATPROMOCIONAL_ASGCOSTORESCALA_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTORESCALA_LABEL_DESC" 			
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Escala Rango</option>
+		</field>
+                <field
+			name="id_tipo_costofijo"
+			type="sql"
+			label="COM_CATPROMOCIONAL_ASGCOSTOTCOSTO_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOTCOSTO_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__tipo_costofijo ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Selecciones Tipo Costo Fijo</option>
+		</field>
+                <field
+			name="id_tipo_precio"
+			type="sql"
+			label="COM_CATPROMOCIONAL_ASGCOSTOTPRECIO_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOTPRECIO_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__tipo_precio ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Seleccione Tipo Precio</option>
+		</field>
+		<field
+			name="valor"
+			type="text"
+			label="COM_CATPROMOCIONAL_ASGCOSTOVALOR_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOVALOR_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+                <field
+			name="estado"
+			type="sql"
+			label="COM_CATPROMOCIONAL_ASGCOSTOESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_ASGCOSTOESTADO_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__estado ORDER BY nombre ASC" key_field="id" value_field="nombre"
+                        required="true"
+			class="PRinput">
+                        <option value="0">Selecciones Estado</option>
+		</field>
+	</fieldset>
+</form>

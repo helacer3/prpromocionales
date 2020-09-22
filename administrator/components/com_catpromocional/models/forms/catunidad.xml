@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="cantidad"
+			type="text"
+			label="COM_CATPROMOCIONAL_CATUCANTIDAD_LABEL"
+			description="COM_CATPROMOCIONAL_CATUCANTIDAD_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="nombre"
+			type="text"
+			label="COM_CATPROMOCIONAL_CATUNOMBRE_LABEL"
+			description="COM_CATPROMOCIONAL_CATUNOMBRE_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>	
+	    <field
+			name="id_tecnica"
+			type="sql"
+			label="COM_CATPROMOCIONAL_CATUTECNICA_LABEL"
+			description="COM_CATPROMOCIONAL_CATUTECNICA_LABEL_DESC" 
+			query="SELECT id, nombre FROM prp_tecnica WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+			class="PRinput">
+		</field>
+		<field
+			name="estado"
+			type="list"
+			label="COM_CATPROMOCIONAL_CATUESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_CATUESTADO_LABEL_DESC"
+			class="PRinput"
+			>
+			<option value="1">Activo</option>
+			<option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>

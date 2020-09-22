@@ -1,0 +1,84 @@
+<extension type="component" version="3.2.0" method="upgrade"> 
+    <name>catpromocional</name>
+    <!-- The following elements are optional and free of formatting constraints -->
+    <creationDate>Diciembre 2015</creationDate>
+    <author>Snayder Acero</author>
+    <authorEmail>helacer3@yahoo.es</authorEmail>
+    <authorUrl>http://www.prpromocionales.com</authorUrl>
+    <copyright>Copyright Info</copyright>
+    <license>License Info</license>
+    <!--  The version string is recorded in the components table -->
+    <version>0.0.1</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>Catálogo de productos Sitio Web PrPromocionales.</description>
+    <install> <!-- Runs on install -->
+            <sql>
+                    <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+            </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+            <sql>
+                    <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+            </sql>
+    </uninstall>
+    <update> <!-- Runs on update; New in 2.5 -->
+            <schemas>
+                    <schemapath type="mysql">sql/updates/mysql</schemapath>
+            </schemas>
+    </update>
+    <!-- Site Main File Copy Section -->
+    <!-- Note the folder attribute: This attribute describes the folder
+            to copy FROM in the package to install therefore files copied
+            in this section are copied from /site/ in the package -->
+    <files folder="site">
+            <filename>index.html</filename>
+            <filename>catpromocional.php</filename>
+            <filename>controller.php</filename>
+            <folder>views</folder>
+            <folder>models</folder>
+            <folder>language</folder>
+            <folder>controllers</folder>
+    </files> 
+    <!-- Administration Section -->
+    <administration>
+        <!-- Administration Menu Section -->
+		<menu view="catpromocionals">COM_CATPROMOCIONAL_MCATALOGO</menu>
+		<submenu>
+			<menu view="catpromocionals">COM_CATPROMOCIONAL_MPRODUCTOS</menu>
+			<menu view="catcategorias">COM_CATPROMOCIONAL_MCATEGORIAS</menu>
+            <menu view="catcosproductos">COM_CATPROMOCIONAL_MPRECIOS</menu>
+			<menu view="catprecios">COM_CATPROMOCIONAL_MCOSPRODUCTOS</menu>
+			<menu view="cattecnicas">COM_CATPROMOCIONAL_MTECNICAS</menu>
+			<menu view="catunidads">COM_CATPROMOCIONAL_MUNIDADES</menu>
+			<menu view="catproveedors">COM_CATPROMOCIONAL_MPROVEEDORES</menu>
+			<menu view="catedads">COM_CATPROMOCIONAL_MEPRODUCTOS</menu>
+			<menu view="catmodelos">COM_CATPROMOCIONAL_MMODELOS</menu>
+			<menu view="catescalas">COM_CATPROMOCIONAL_MCESCALAS</menu>                        
+			<menu view="catprpescalas">COM_CATPROMOCIONAL_MPRETECNICAS</menu>
+			<menu view="catcotizacions">COM_CATPROMOCIONAL_MRCOTIZACIONES</menu>
+			<menu view="cattcotizas">COM_CATPROMOCIONAL_MTCOTIZAS</menu>
+			<menu view="catlimcotizas">COM_CATPROMOCIONAL_MLCOTIZAS</menu>
+			<menu view="catdominios">COM_CATPROMOCIONAL_MBLQDOMINIOS</menu>
+			<menu view="catcostos">COM_CATPROMOCIONAL_MCOSTOS</menu>
+			<menu view="catasgcostos">COM_CATPROMOCIONAL_MACOSTOS</menu>
+		</submenu>
+        <files folder="admin">
+                <!-- Admin Main File Copy Section -->
+                <filename>index.html</filename>
+                <filename>catpromocional.php</filename>
+                <filename>controller.php</filename>
+                <!-- SQL files section -->
+                <folder>media</folder>
+                <folder>sql</folder>
+                <folder>models</folder>
+                <folder>tables</folder>
+                <folder>views</folder>
+                <folder>language</folder>
+                <folder>controllers</folder>
+        </files> 
+        <languages>
+                <language tag="en-GB">en-GB.com_catpromocional.ini</language>
+                <language tag="en-GB">en-GB.com_catpromocional.sys.ini</language>
+        </languages>
+    </administration> 
+</extension>

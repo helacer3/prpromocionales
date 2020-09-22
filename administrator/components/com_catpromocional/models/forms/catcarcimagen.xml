@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="products_file"
+			type="file"
+                        accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+			label="COM_CATPROMOCIONAL_XLSARCIMAGENES_LABEL"
+			description="COM_CATPROMOCIONAL_XLSARCIMAGENES_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+	</fieldset>
+</form>

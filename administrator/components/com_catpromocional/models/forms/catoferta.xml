@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="titulo"
+			type="text"
+			label="COM_CATPROMOCIONAL_OFERTATITULO_LABEL"
+			description="COM_CATPROMOCIONAL_OFERTATITULO_LABEL_DESC"
+			size="2100"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="subtitulo"
+			type="text"
+			label="COM_CATPROMOCIONAL_OFERTASUBTITULO_LABEL"
+			description="COM_CATPROMOCIONAL_OFERTASUBTITULO_LABEL_DESC"
+			size="200"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="enlace"
+			type="url"
+			label="COM_CATPROMOCIONAL_OFERTAENLACE_LABEL"
+			description="COM_CATPROMOCIONAL_OFERTAENLACE_LABEL_DESC"
+			size="500"
+			class="PRinput"
+			default=""
+		/>	
+		<field
+			name="id_categoria"
+			type="sql"
+			label="COM_CATPROMOCIONAL_OFERTACATEGORIA_LABEL"
+			description="COM_CATPROMOCIONAL_OFERTACATEGORIA_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__categoria WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+			class="PRinput cls_categoria">
+            <option value="0">Sin Categoría</option>
+		</field>
+        <field 
+            name="path" 
+            type="media" 
+            directory="/deals"
+            label="COM_CATPROMOCIONAL_OFERTAIMAGEN_LABEL"
+            description="COM_CATPROMOCIONAL_OFERTAIMAGEN_LABEL_DESC"
+            preview="true"
+            class="PRinput"
+            required="true"             
+        />
+		<field
+			name="orden"
+			type="sql"
+			label="COM_CATPROMOCIONAL_OFERTAORDEN_LABEL"
+			description="COM_CATPROMOCIONAL_OFERTAORDEN_LABEL_DESC" 
+			query="SELECT id, titulo FROM #__ofertas ORDER BY titulo ASC" 
+            key_field="id" value_field="titulo"
+			class="PRinput">
+		</field>
+		<field
+            name="estado"
+            type="list"
+            label="COM_CATPROMOCIONAL_OFERTAESTADO_LABEL"
+            description="COM_CATPROMOCIONAL_OFERTAESTADO_LABEL_DESC"
+            class="PRinput"  
+            required="true"  
+            >
+            <option value="0">Seleccione Estado oferta</option>
+            <option value="1">Activo</option>
+            <option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+        <field
+            name="id_escala"
+            type="sql"
+            label="COM_CATPROMOCIONAL_REESCALA_LABEL"
+            description="COM_CATPROMOCIONAL_REESCALA_LABEL_DESC" 
+            query="SELECT id,nombre FROM #__escala WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            class="PRinput">
+            <option value="0">Seleccione Escala</option>
+		</field>
+		<field
+			name="rango_inicial"
+			type="text"
+			label="COM_CATPROMOCIONAL_RERINICIAL_LABEL"
+			description="COM_CATPROMOCIONAL_RERINICIAL_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="rango_final"
+			type="text"
+			label="COM_CATPROMOCIONAL_RERFINAL_LABEL"
+			description="COM_CATPROMOCIONAL_RERFINAL_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>            
+		<field
+			name="estado"
+			type="list"
+			label="COM_CATPROMOCIONAL_REESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_REESTADO_LABEL_DESC"
+			class="PRinput"
+			>
+			<option value="1">Activo</option>
+			<option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>

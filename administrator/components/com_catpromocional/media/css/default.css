@@ -1,0 +1,238 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/02/2015, 06:32:42 PM
+    Author     : snayder
+*/
+.adminlist {
+        width: 100% !important;
+}
+.PRtitle {
+    color: #194375 !important;
+    font-weight: bold !important;
+    background-color: #B8D0EF !important;
+    padding: 3px 10px;
+}
+.PRtitle a {
+    cursor: pointer;
+    color: #378137 !important;
+    font-size: 14px;
+    float: right;
+    margin-right: 10px;
+}
+.PRtitle_reporte {
+    font-weight: bold;
+    color: #FFF !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    background-color: #184D81 !important;
+    width: 100% !important;
+}
+.PRsbtitle_reporte {
+    text-align: center;
+    background-color: #6188ad;
+}
+.PRregisters_reporte {
+    color: #000 !important;
+    font-size: 12px !important;
+    background-color: #F2F7FD;
+}
+.PRregisters_reporteB {
+    color: #194375 !important;
+    background-color: #E7EFFA;
+    font-size: 12px !important;
+}
+.PRtitle_reporte td {
+    padding: 5px 3px !important;
+}
+.PRtitle_reporte td  a {
+    color: #FFF !important;
+    cursor: pointer;
+}
+.PRregisters_reporte td,
+.PRregisters_reporteB td {
+    padding: 5px !important;
+}
+
+.PRinput {
+    width: 80% !important;
+    margin: 0 auto;
+}
+.PRlegend {
+    background-color: #194375 !important;
+    padding: 7px 11px !important;
+    color: #FFF !important;
+    width: 135px !important;
+    margin-right: 20px !important;
+}
+.Selmultiple {
+    height: 150px !important;
+}
+iframe {
+    height: 140px !important;
+    width: 80%;
+}
+#sbox-content iframe {
+    height: 450px !important;
+    width: 100% !important;
+}
+
+a.catprincipal {
+    font-weight: bold;
+    font-size: 12px;
+    color: #333399;
+}
+a.catsecundaria {
+    padding-left: 22px;
+    color: #333399;
+}
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+#contenedor_cotiza,
+#contenedor_cotiza #cotiza_header,
+#contenedor_cotiza #cotiza_header #cotiza_header_logo,
+#contenedor_cotiza #cotiza_header #cotiza_header_lateral,
+#contenedor_cotiza #cotiza_header #cotiza_header_lateral #cotiza_header_number,
+#contenedor_cotiza #cotiza_header #cotiza_header_lateral #cotiza_header_date,
+#contenedor_cotiza #cotiza_info_client,
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content,
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_name,
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_value,
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_cmname,
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_cmvalue,
+#contenedor_cotiza #cotiza_products,
+#contenedor_cotiza #cotiza_products #cotiza_products_header,
+#contenedor_cotiza #cotiza_products #cotiza_products_header .cotiza_products_header_title,
+#contenedor_cotiza #cotiza_products #cotiza_products_item,
+#contenedor_cotiza #cotiza_products #cotiza_products_item .cotiza_products_item_value {
+    float: left;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+}
+#contenedor_cotiza {
+    /*margin-top: -25px;*/
+    width: 100%;
+    border-top: outset #1A3867 1px;
+    border-bottom: outset #1A3867 1px;
+}
+#contenedor_cotiza #cotiza_header{
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    border-bottom: inset #E77817 1px;
+    margin-bottom: 5px;
+}
+#contenedor_cotiza #cotiza_header #cotiza_header_logo {
+    width: 70%;
+    height: 60px;
+    text-align: center;
+}
+#contenedor_cotiza #cotiza_header #cotiza_header_lateral {
+    width: 30%;
+    height: 70px;
+    padding: 5px;
+}
+#contenedor_cotiza #cotiza_header #cotiza_header_lateral #cotiza_header_number {
+    width: 100%;    
+    height: 40px;
+    text-align: center;
+    color: #E77817;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 10px;
+    border-bottom: inset #E77817 1px;
+}
+#contenedor_cotiza #cotiza_header #cotiza_header_lateral #cotiza_header_date {    
+    width: 100%;    
+    height: 20px;
+    text-align: center;    
+    color: #1A3867;
+    font-weight: bold;
+    font-size: 14px;
+}
+#contenedor_cotiza #cotiza_info_client {
+    width: 100%;
+    height:auto;
+}
+#contenedor_cotiza #cotiza_info_client .cotiza_info_left { 
+    width: 70%;
+    height:auto;    
+}
+#contenedor_cotiza #cotiza_info_client .cotiza_info_right {   
+    width: 30%;
+    height:auto;    
+}
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_name {  
+    width: 50%;
+    height:20px;
+    color: #E77817;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_value {    
+    width: 50%;
+    height:20px;
+    font-size: 12px;
+}
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_cmname {
+    color: #E77817;
+    font-weight: bold;
+    width: 100%;
+    height:25px;     
+}
+#contenedor_cotiza #cotiza_info_client .cotiza_info_content .cotiza_info_content_cmvalue {
+    text-align: justify;
+    padding: 7px;
+    width: 100%;
+    height:110px; 
+    background-color: #FCFCFC;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#contenedor_cotiza #cotiza_products {    
+    background-color: beige;
+    width: 100%;
+    height:auto;    
+}
+#contenedor_cotiza #cotiza_products #cotiza_products_header {  
+    width: 100%;
+    height:25px;
+}
+#contenedor_cotiza #cotiza_products #cotiza_products_item { 
+    width: 100%;
+}
+#contenedor_cotiza #cotiza_products #cotiza_products_header .cotiza_products_header_title {   
+    background-color: #E77817;
+    color: #FFF;
+    width: 12.5%;
+    font-size: 11px;
+    text-align: center;    
+}
+#contenedor_cotiza #cotiza_products #cotiza_products_item .cotiza_products_item_value {   
+    width: 12.5%;
+    color: #000;
+    font-size: 10px;
+    height: 35px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+#contenedor_cotiza #cotiza_products #cotiza_products_item .cotiza_products_item_value img {
+    max-width: 28px;
+    max-height: 28px;
+}
+/*.subhead  {
+    display: none;
+}*/
+.rad_order { display: inline-block; vertical-align: top; }
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; display: inline-block; margin: -17px 0 0 50px; display: none; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="nombre"
+			type="text"
+			label="COM_CATPROMOCIONAL_CATNOMBRE_LABEL"
+			description="COM_CATPROMOCIONAL_CATNOMBRE_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="descripcion"
+			type="editor"
+			label="COM_CATPROMOCIONAL_CATDESCRIPCION_LABEL"
+			description="COM_CATPROMOCIONAL_CATDESCRIPCION_LABEL_DESC"
+			rows="10" 
+			cols="35"
+            filter="safehtml"
+			default=""
+		/>		
+		<field
+			name="categoria_padre"
+			type="sql"
+			label="COM_CATPROMOCIONAL_CATCATEGORIA_LABEL"
+			description="COM_CATPROMOCIONAL_CATCATEGORIA_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__categoria WHERE estado=1 ORDER BY nombre ASC" 
+	        key_field="id" value_field="nombre"
+			class="PRinput cls_catpadre" >
+			<option value="0">Seleccione Categoría padre</option>
+		</field>
+        <field 
+            name="imagen_1" 
+            type="media" 
+            directory="catalog/categories"
+            label="COM_CATPROMOCIONAL_CATIMAGEN1_LABEL"
+            description="COM_CATPROMOCIONAL_CATIMAGEN1_LABEL_DESC"
+            preview="true"
+            class="PRinput"                     
+        />
+		<field
+			name="estado"
+			type="list"
+			label="COM_CATPROMOCIONAL_CATESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_CATESTADO_LABEL_DESC"
+            required="true"
+			class="PRinput"
+			>
+            <option value="0">Seleccione Estado categoría</option>
+			<option value="1">Activo</option>
+			<option value="2">Inactivo</option>
+		</field>
+		<field 
+			name="orden" 
+			type="integer" 
+			default="1" 
+			label="COM_CATPROMOCIONAL_CATCATANTECEDE_LABEL" 
+			description="COM_CATPROMOCIONAL_CATCATANTECEDE_LABEL_DESC" 
+			first="1" 
+			last="70" 
+			step="1" 
+		/>
+	</fieldset>
+</form>

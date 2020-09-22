@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="nombre"
+			type="text"
+			label="COM_CATPROMOCIONAL_NOMBRE_LABEL"
+			description="COM_CATPROMOCIONAL_NOMBRE_LABEL_DESC"
+			size="100"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="sku"
+			type="text"
+			label="COM_CATPROMOCIONAL_SKU_LABEL"
+			description="COM_CATPROMOCIONAL_SKU_LABEL_DESC"
+			size="100"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="referencia"
+			type="text"
+			label="COM_CATPROMOCIONAL_REFERENCIA_LABEL"
+			description="COM_CATPROMOCIONAL_REFERENCIA_LABEL_DESC"
+			size="100"
+			class="PRinput"
+			default=""
+		/>
+		<field
+			name="descripcion_corta"
+			type="editor"
+			label="COM_CATPROMOCIONAL_DESCCORTA_LABEL"
+			description="COM_CATPROMOCIONAL_DESCRIPCION_LABEL_DESC"
+			filter="safehtml"
+            cols="10"
+            rows="5"
+			default=""
+		/>
+		<field
+			name="descripcion_larga"
+			type="editor"
+			label="COM_CATPROMOCIONAL_DESCLARGA_LABEL"
+			description="COM_CATPROMOCIONAL_DESCRIPCION_LABEL_DESC"
+			filter="safehtml"
+			default=""
+		/>
+		<field
+			name="especificaciones"
+			type="editor"
+			label="COM_CATPROMOCIONAL_ESPECIFICACIONES_LABEL"
+			description="COM_CATPROMOCIONAL_ESPECIFICACIONES_LABEL_DESC"
+			filter="safehtml"
+			class="PReditor"
+            rows="2"
+	        height="70px"
+			default=""
+		/>                	
+		<field
+			name="id_proveedor"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PROVEEDOR_LABEL"
+			description="COM_CATPROMOCIONAL_PROVEEDOR_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__proveedor WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+			class="PRinput cls_proveedor">
+            <option value="0">Seleccione Proveedor</option>
+		</field>	
+		<field
+			name="categorias"
+			type="sql"
+			label="COM_CATPROMOCIONAL_CATPRINCIPAL_LABEL"
+			description="COM_CATPROMOCIONAL_CATPRINCIPAL_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__categoria WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            multiple="multiple"
+			class="PRinput Selmultiple cls_categorias">
+		</field>	
+		<field
+			name="tecnicas"
+			type="sql"
+			label="COM_CATPROMOCIONAL_TECNICAS_LABEL"
+			description="COM_CATPROMOCIONAL_TECNICAS_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__tecnica WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            multiple="multiple"
+			class="PRinput Selmultiple cls_tecnicas">
+		</field>	
+        <field
+			name="paises"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PAISES_LABEL"
+			description="COM_CATPROMOCIONAL_PAISES_LABEL_DESC" 
+			query="SELECT id,nombre FROM #__pais WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            multiple="multiple"
+			class="PRinput Selmultiple cls_paises">
+		</field>	
+	    <field
+			name="productos_relacionados"
+			type="sql"
+			label="COM_CATPROMOCIONAL_PRDRELACIONADOS_LABEL"
+			description="COM_CATPROMOCIONAL_PRDRELACIONADOS_LABEL_DESC" 
+			query="SELECT id, nombre FROM prp_producto WHERE publicado = 1 AND estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            multiple="multiple"
+			class="PRinput Selmultiple cls_prdrelacionados">
+		</field>
+        <field 
+            name="imagen_1" 
+            type="media" 
+            directory="catalog/products"
+            label="COM_CATPROMOCIONAL_IMAGEN1_LABEL"
+            description="COM_CATPROMOCIONAL_IMAGEN1_LABEL_DESC"
+            preview="true"
+            class="PRinput"             
+        />
+        <field 
+            name="imagen_2" 
+            type="media" 
+            directory="catalog/products"
+            label="COM_CATPROMOCIONAL_IMAGEN2_LABEL"
+            description="COM_CATPROMOCIONAL_IMAGEN2_LABEL_DESC"
+            preview="true"
+            class="PRinput"           
+        />
+        <field 
+            name="imagen_3" 
+            type="media" 
+            directory="catalog/products"
+            label="COM_CATPROMOCIONAL_IMAGEN3_LABEL"
+            description="COM_CATPROMOCIONAL_IMAGEN3_LABEL_DESC"
+            preview="true"
+            class="PRinput"     
+        />
+        <field 
+            name="imagen_4" 
+            type="media" 
+            directory="catalogo"
+            label="COM_CATPROMOCIONAL_IMAGEN4_LABEL"
+            description="COM_CATPROMOCIONAL_IMAGEN4_LABEL_DESC" 
+            preview="true"
+            class="PRinput"                         
+        />	
+        <field
+            name="id_escala"
+            type="sql"
+            label="COM_CATPROMOCIONAL_PESCALA_LABEL"
+            description="COM_CATPROMOCIONAL_PESCALA_LABEL_DESC" 
+            query="SELECT id,nombre FROM #__escala WHERE estado = 1 AND id_tipo_escala = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            class="PRinput">
+            <option value="0">Seleccione Escala</option>
+		</field>		
+        <field
+            name="id_modelo"
+            type="sql"
+            label="COM_CATPROMOCIONAL_PMODELO_LABEL"
+            description="COM_CATPROMOCIONAL_PMODELO_LABEL_DESC" 
+            query="SELECT id,nombre FROM #__modelo WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            class="PRinput">
+            <option value="0">Seleccione Modelo</option>
+		</field>
+		<field
+			name="cnt_minima"
+			type="text"
+			label="COM_CATPROMOCIONAL_CNTMINIMA_LABEL"
+			description="COM_CATPROMOCIONAL_CNTMINIMA_LABEL_DESC"
+			size="100"
+			class="PRinput"
+			default="1"
+		/>
+		<field
+            name="destacado"
+            type="list"
+            label="COM_CATPROMOCIONAL_DESTACADO_LABEL"
+            description="COM_CATPROMOCIONAL_DESTACADO_LABEL_DESC"
+            class="PRinput"    
+            >
+            <option value="0">Seleccione producto destacado</option>
+            <option value="1">Si</option>
+            <option value="2">No</option>
+		</field>
+		<field
+            name="publicado"
+            type="list"
+            label="COM_CATPROMOCIONAL_PUBLICADO_LABEL"
+            description="COM_CATPROMOCIONAL_PUBLICADO_LABEL_DESC"
+            class="PRinput"    
+            >
+            <option value="0">Seleccione publicación producto</option>
+            <option value="1">Si</option>
+            <option value="2">No</option>
+		</field>
+		<field
+            name="estado"
+            type="list"
+            label="COM_CATPROMOCIONAL_ESTADO_LABEL"
+            description="COM_CATPROMOCIONAL_ESTADO_LABEL_DESC"
+            class="PRinput"    
+            >
+            <option value="0">Seleccione Estado producto</option>
+            <option value="1">Activo</option>
+            <option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>

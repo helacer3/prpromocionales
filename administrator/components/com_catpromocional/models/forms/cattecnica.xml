@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="nombre"
+			type="text"
+			label="COM_CATPROMOCIONAL_CATNOMBRE_LABEL"
+			description="COM_CATPROMOCIONAL_CATNOMBRE_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>
+		<field
+			name="nombre_frontend"
+			type="text"
+			label="COM_CATPROMOCIONAL_CATNOMBREFRONTEND_LABEL"
+			description="COM_CATPROMOCIONAL_CATNOMBREFRONTEND_LABEL_DESC"
+			class="PRinput"
+			default=""
+            required="true"
+		/>	
+		<field
+			name="descripcion"
+			type="editor"
+			label="COM_CATPROMOCIONAL_DESCRIPCION_LABEL"
+			description="COM_CATPROMOCIONAL_DESCRIPCION_LABEL_DESC"
+			filter="safehtml"
+            cols="10"
+            rows="5"
+			default=""
+		/>	
+		<field
+			name="descripcion_unidad"
+			type="editor"
+			label="COM_CATPROMOCIONAL_UDESCRIPCION_LABEL"
+			description="COM_CATPROMOCIONAL_UDESCRIPCION_LABEL_DESC"
+			filter="safehtml"
+            cols="10"
+            rows="5"
+			default=""
+		/>
+        <field 
+            name="path" 
+            type="media" 
+            directory="techniques/"
+            label="COM_CATPROMOCIONAL_TIMAGEN_LABEL"
+            description="COM_CATPROMOCIONAL_TIMAGEN_LABEL_DESC"
+            preview="true"
+            class="PRinput"             
+        />
+        <field
+            name="id_escala"
+            type="sql"
+            label="COM_CATPROMOCIONAL_PESCALA_LABEL"
+            description="COM_CATPROMOCIONAL_PESCALA_LABEL_DESC" 
+            query="SELECT id,nombre FROM #__escala WHERE estado = 1 AND id_tipo_escala = 2 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            class="PRinput">
+            <option value="0">Seleccione Escala</option>
+		</field>
+        <field
+            name="id_tecnica"
+            type="sql"
+            label="COM_CATPROMOCIONAL_PPTECNICA_LABEL"
+            description="COM_CATPROMOCIONAL_PPTECNICA_LABEL_DESC" 
+            query="SELECT id,nombre FROM #__tecnica WHERE estado = 1 ORDER BY nombre ASC" 
+            key_field="id" value_field="nombre"
+            class="PRinput">
+            <option value="0">Es escala Padre</option>
+		</field>
+		<field
+			name="estado"
+			type="list"
+			label="COM_CATPROMOCIONAL_CATESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_CATESTADO_LABEL_DESC"
+			class="PRinput"
+			>
+			<option value="1">Activo</option>
+			<option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>

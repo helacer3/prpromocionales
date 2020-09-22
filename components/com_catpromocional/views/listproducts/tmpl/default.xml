@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Catálogo Prpromocionales">
+        <message>
+            Catálogo Prpromocionales
+        </message>
+        <state>
+            <fields name="request">
+                <fieldset name="request">
+                    <field name="id" type="hidden" default="0" />
+                    <field name="task" type="hidden" default="getproducts" />
+                </fieldset>
+            </fields>
+        </state>
+    </layout>
+</metadata>

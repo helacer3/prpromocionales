@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="dominio"
+			type="text"
+			label="COM_CATPROMOCIONAL_CATDOMINIO_LABEL"
+			description="COM_CATPROMOCIONAL_CATDOMINIO_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+		<field
+			name="estado"
+			type="list"
+			label="COM_CATPROMOCIONAL_CATESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_CATESTADO_LABEL_DESC"
+                        required="true"
+			class="PRinput"
+			>
+			<option value="0">Seleccione Estado</option>
+			<option value="1">Activo</option>
+			<option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>

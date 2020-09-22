@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="text"
+			label="COM_CATPROMOCIONAL_PRVID_LABEL"
+			description="COM_CATPROMOCIONAL_PRVID_LABEL_DESC"
+			class="PRinput"
+                        required="true"
+		/>
+		<field
+			name="nombre"
+			type="text"
+			label="COM_CATPROMOCIONAL_PRVNOMBRE_LABEL"
+			description="COM_CATPROMOCIONAL_PRVNOMBRE_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+		<field
+			name="abreviatura"
+			type="text"
+			label="COM_CATPROMOCIONAL_PRVABREVIATURA_LABEL"
+			description="COM_CATPROMOCIONAL_PRVABREVIATURA_LABEL_DESC"
+			class="PRinput"
+			default=""
+                        required="true"
+		/>
+		<field
+			name="descripcion"
+			type="editor"
+			label="COM_CATPROMOCIONAL_PRVDESCRIPCION_LABEL"
+			description="COM_CATPROMOCIONAL_PRVDESCRIPCION_LABEL_DESC"
+			rows="10" 
+			cols="35"
+                        filter="safehtml"
+			default=""
+		/>
+		<field
+			name="estado"
+			type="list"
+			label="COM_CATPROMOCIONAL_PRVESTADO_LABEL"
+			description="COM_CATPROMOCIONAL_PRVESTADO_LABEL_DESC"
+			class="PRinput"
+			>
+			<option value="1">Activo</option>
+			<option value="2">Inactivo</option>
+		</field>
+	</fieldset>
+</form>
