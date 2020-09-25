@@ -62,6 +62,16 @@
 			<menu view="catcostos">COM_CATPROMOCIONAL_MCOSTOS</menu>
 			<menu view="catasgcostos">COM_CATPROMOCIONAL_MACOSTOS</menu>
 		</submenu>
+        <menu view="catpromocionals">COM_CATPROMOCIONAL_MMATRICES</menu>
+        <submenu>
+            <menu view="catmtzatributos">COM_CATPROMOCIONAL_MMATRIZ_ATRIBUTOS</menu>
+            <menu view="catmtzcategorias">COM_CATPROMOCIONAL_MMATRIZ_CATEGORIAS</menu>
+            <menu view="catmtzcorrespondecia">COM_CATPROMOCIONAL_MMATRIZ_CORRESPONDENCIA</menu>
+            <menu view="catmtzformulas">COM_CATPROMOCIONAL_MMATRIZ_FORMULAS</menu>
+            <menu view="catmtztecnicas">COM_CATPROMOCIONAL_MMATRIZ_TECNICAS</menu>
+            <menu view="catmtzunificacion">COM_CATPROMOCIONAL_MMATRIZ_UNIFICACION</menu>
+            <menu view="catmtzvariables">COM_CATPROMOCIONAL_MMATRIZ_VARIABLES</menu>
+        </submenu>
         <files folder="admin">
                 <!-- Admin Main File Copy Section -->
                 <filename>index.html</filename>
